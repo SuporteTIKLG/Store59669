@@ -1,0 +1,147 @@
+<!-- estiloproduto.htm : Grid v2 2024  (Theme) -->
+<ProdTop>
+<style><IncludeHTML src="themes/{theme-folder}/css/theme-product.css"></style>
+<style><IncludeHTML src="themes/{theme-folder}/css/store-async.css"></style>
+
+<script src="/js/vex/v4.0.1/vex.combined.min.js?cccfc=1"></script>
+<script src="/js/flickity/v2.2.2/flickity-min.js?cccfc=1"></script>
+<link href="/css/flickity/v2.2.2/flickity-min.css?cccfc=1" rel=stylesheet>
+<StoreInterests>
+<script src='<PathTo file="htm/js/resource-<StoreLanguage>.js">'></script>
+<script src='<PathTo file="htm/js/config.js">'></script>
+<script src='<PathTo file="htm/js/store-lib.js">'></script>
+<script src='<PathTo file="htm/js/smartmodal-min.js">'></script>
+
+<!-- SPY2 - End -->
+<link href="<PathTo file="htm/css/fc_grid_v1.css">" rel="stylesheet" type="text/css">
+<script src="<PathTo file="htm/js/fc_grid_v1.js">"></script>
+<script>var IsFramePage=false;</script>
+
+<style>html{-webkit-text-size-adjust:100%;}</style>
+
+<!-- Script Filters -->
+<script>
+iQtdProds=<QtProd>;
+FCLib$.onReady(function(){
+  if(iQtdProds=="1"){
+    var sPages=sF$.fnGetID("idPageCountFC");
+    if(sPages)sPages.style.display="none";
+  }
+});
+OffsetAutoPagFC=290;
+var bTemSub=false;
+</script>
+
+<!-- Template for product quantity in cart -->
+<textarea id=cartQuantityTemplate style=display:none>
+  <div id="dynCartAdd<prodId>" class="dynCartAdd hidethis" onclick="dynCart$.changeQty(<prodId>,1)"><dynCartAdd></div>
+  <div id="dynCartQtyPanel<prodId>" class="dynCartQtyPanel hidethis">
+    <svg class=dynCartQtyDel viewBox="0 0 24 24" onclick="dynCart$.stepQty(<prodId>,false)"><path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm5 11h-10v-2h10v2z"/></svg>
+    <input type=number id="dynCartQty<prodId>" prodid="<prodId>" value="<cartprodqty>" oriValue="<cartprodqty>" maxlength=2 oninput="this.value=this.value.replace(/[^\d+]/,'').substring(0,3)" onkeyup="delayExec(function(){dynCart$.inputQty(<prodId>);},1000)">
+    <svg class=dynCartQtyAdd viewBox="0 0 24 24" onclick="dynCart$.stepQty(<prodId>,true)"><path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm5 11h-4v4h-2v-4h-4v-2h4v-4h2v4h4v2z"/></svg>
+  </div>
+  <div id="dynCartDone<prodId>" class="dynCartDone hidethis"><div class="skeleton-item"><a onclick="Cart$.fnShowCartCheckout();"><dynCartDone></a></div></div>
+</textarea>
+
+</ProdTop>
+
+<ProdList><!-- Prod List --></ProdList>
+
+<ProdDet>
+<script>sF$.fnFastPreviewChangeURL();</script>
+
+<style>
+.FCBoxGrid{margin-bottom:15px!important;}
+.FCProdSty5{padding:1rem;}
+.FCProdSty5 .ProductDet .dynCartQty{width:210px;}
+.FCProdSty5 .product-details-content-container{padding:1rem;}
+#idListProdCrossFC li{cursor:pointer;}
+#idDivGridImg{display:grid;justify-content:center;}
+.FCProdSty5 .fc-grid-add-to-cart-ready-button{padding:9px 0px 6px 0!important;}
+.FCProdSty5 .ProductStyleReviewQtyOnFC{top:-4px;}
+.FCProdSty5 .fc-grid-add-to-cart-button{padding: 10px 0px!important;}
+.FCProdSty5 .fc-grid-add-to-cart-ready-button:before{top:6px!important;}
+.FCProdSty5 .fc-grid-choose-options-button{padding:10px 0px!important;}
+@media only screen and (max-width:1023px){
+  .det-product-reviews{margin-bottom:80px;}
+  .ProductDet #idEstNoCommentsClickProdOpFC a{font-size:0.8rem;}
+  .ProductDet #idCommentsClickFC a{background:#FF625F;border-radius:2px;padding:5px 10px 5px 10px;color:#ffffff;line-height:30px;}
+  .ProductDet .FreightContainerFC{margin:25px 0 150px 0;}
+  .ProductStyleBoxDescriptionFC{margin-bottom:10px;}
+  .ProdWLSel{margin:80px 0 20px 0px!important;}
+}
+</style>
+
+<!-- Prod Det -->
+<link rel="stylesheet" type="text/css" href="/js/MagicToolbox/MagicZoomPlusV3/magiczoomplus.css" />
+<script type="text/javascript" src="/js/MagicToolbox/MagicZoomPlusV3/magiczoomplus.js" defer></script>
+<div class='FCCloseBack' onclick='window.top.fcSpy$.removeLastSmartModal();'><img alt='Back' src='<PathTo file="images/smclose.svg">'></div>
+
+<IncludeHTML src="themes/{theme-folder}/theme-product-det.htm">
+
+<script>
+/* Cross Selling open on iframe */
+sF$.fnChangeLinksCrossSelOnFCSpy('#idListProdCrossFC');
+
+FCLib$.onReady(function(){    
+  sF$.fnGridVideoPosition();
+  sF$.fnInsertVideoGridThumb();
+});
+
+/*comments on a top window*/
+sF$.fnChangeTargetLinksOnFCSpy('#idEstNoCommentsClickProdOpFC');
+sF$.fnChangeTargetLinksOnFCSpy('.det-product-show-product-review-icons');
+sF$.fnChangeTargetLinksOnFCSpy('#idBreadcrumb');
+/*comments on a top window*/
+
+sF$.fnChangeTargetLinksOnFCSpy('.det-product-recommend');
+sF$.fnChangeTargetLinksOnFCSpy('#BotComprarCJ');
+
+sF$.fnAdjustButtonLocation();
+
+/*native share mobile*/
+window.top.document.title=document.getElementById("idNameProductGridFC").innerText;
+window.top.document.querySelector("link[rel='canonical']").setAttribute('href', location.protocol + '//' + location.host + '<URLPROD>');
+</script>
+
+<!-- Box Buy proddet -->
+<div id="BoxFloat" class="buyBoxFloat">
+  <FormProd>
+    <div class="buyBoxFloatClose">
+      <img  src="<storePath>images/icon-menu-close-filter.svg" alt="Close" width="18" height="18" onclick='closeDiv()'>
+    </div>
+    <div class="buyBoxFloatImg">
+      <img  src="<prodImgMain>" alt="<prodNameEnc>">
+    </div>
+    <div class="buyBoxFloatName">
+      <ProdName>
+      <div style="display:none;"><Adicional1><Adicional2><Adicional3><AdicionalD1><AdicionalD2><AdicionalD3><Cor></div>
+    </div>
+    <div class="buyBoxFloatPrice">
+      <prodPriceAtSight>
+    </div>  
+    <div class="buyBoxFloatButtonHere">
+      <div class="fc-grid-add-to-cart-button" onclick="boxFloatGrid()"><b><var key="box-buy-details-text"></var></b></div>
+    </div>
+  </FormProd>
+</div>
+<script>
+sF$.fnToggleBoxFloat();
+function boxFloatGrid(){
+  document.querySelector(".FCNivelGrid_0")?window.scrollTo({top:0,behavior:'smooth'}):Compra<IDProduto>();
+}
+</script>
+<!-- End - Box buy proddet -->
+</ProdDet>
+
+<ProdAmp><!-- Prod Amp --></ProdAmp>
+<ProdBottom>
+<script>
+  FCLib$.onReady(function(){FCLib$.useLangResource(oResources);});
+  function FuncAutoPagEnd(){
+    dynCart$.updateQty();
+  }
+  sF$.fnDisableCode();
+</script>
+</ProdBottom>
+<!-- estiloproduto.htm : Grid v2 2024  (Theme) -->
