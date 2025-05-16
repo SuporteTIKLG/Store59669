@@ -1,0 +1,148 @@
+<script src='<PathTo file="htm/js/smartmodal-min.js">'></script>
+
+<!-- Template for product quantity in cart -->
+<textarea id=cartQuantityTemplate style=display:none>
+  <div id="dynCartAdd<prodId>" class="dynCartAdd hidethis" onclick="dynCart$.changeQty(<prodId>,1)"><dynCartAdd></div>
+  <div id="dynCartQtyPanel<prodId>" class="dynCartQtyPanel hidethis">
+    <svg class=dynCartQtyDel viewBox="0 0 24 24" onclick="dynCart$.stepQty(<prodId>,false)"><path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm5 11h-10v-2h10v2z"/></svg>
+    <input type=number id="dynCartQty<prodId>" prodid="<prodId>" value="<cartprodqty>" oriValue="<cartprodqty>" maxlength=2 oninput="this.value=this.value.replace(/[^\d+]/,'').substring(0,3)" onkeyup="delayExec(function(){dynCart$.inputQty(<prodId>);},1000)">
+    <svg class=dynCartQtyAdd viewBox="0 0 24 24" onclick="dynCart$.stepQty(<prodId>,true)"><path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm5 11h-4v4h-2v-4h-4v-2h4v-4h2v4h4v2z"/></svg>
+  </div>
+  <div id="dynCartDone<prodId>" class="dynCartDone hidethis"><div class="skeleton-item"><a onclick="Cart$.fnShowCartCheckout();"><dynCartDone></a></div></div>
+</textarea>
+
+<!-- Main Home -->
+  <div class="main-container">
+
+    <!-- Product Sales -->
+    <div id="home-sales-section">
+      <div class="main-product-block-container">
+        <div class="main-product-block-container-title">
+         <h1><var key="theme-4-home-title-sale-txt"></var></h1>
+        </div>
+        <div class="main-product-block-container-products">
+          <div class="home-container-products-child main-product-block-container-products-child home-container-products-sales"><prod out="p5" em="prom,rand"></div>
+          <div class="home-container-products-child main-product-block-container-products-child home-container-products-sales"><prod out="p5" em="prom,rand"></div>
+          <div class="home-container-products-child main-product-block-container-products-child home-container-products-sales"><prod out="p5" em="prom,rand"></div>
+          <div class="home-container-products-child main-product-block-container-products-child home-container-products-sales"><prod out="p5" em="prom,rand"></div>
+        </div>
+      </div>
+  
+      <!-- Product & Banner -->
+      <div class="main-product-block-special-separator">
+        <div class="main-product-block-special-separator-product">
+           <div class="main-product-block-special-separator-child home-container-products-sales-special-day"><prod out="p55" em="prom,rand"></div>
+        </div>
+        <div class="main-product-block-special-separator-banner">
+          <a href="<banner-redir 12>" target="_self">
+            <img src="<banner-image 12>" alt="<banner-alt 12>" width="418" height="500" loading="lazy">
+            <div class="home-container-three-banners-child-text">
+                <div class="home-container-three-banners-child-text-title"><var key="theme-5-home-banner-title-sales"></var></div>
+                <div class="home-container-three-banners-child-button"><var key="theme-5-home-banner-button"></var></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Release -->
+    <div id="home-release-section">
+      <div class="main-product-block-container">
+        <div class="main-product-block-container-title">
+         <h2><var key="theme-4-home-title-releases-txt"></var></h2>
+        </div>
+        <div class="main-product-block-container-products">
+          <div class="home-container-products-child main-product-block-container-products-child home-container-products-releases"><prod out="p5" em="new,rand"></div>
+          <div class="home-container-products-child main-product-block-container-products-child home-container-products-releases"><prod out="p5" em="new,rand"></div>
+          <div class="home-container-products-child main-product-block-container-products-child home-container-products-releases"><prod out="p5" em="new,rand"></div>
+          <div class="home-container-products-child main-product-block-container-products-child home-container-products-releases"><prod out="p5" em="new,rand"></div>
+        </div>
+      </div>
+  
+      <!-- Product & Banner -->
+      <div class="main-product-block-special-separator">
+        <div class="main-product-block-special-separator-product">
+          <div class="main-product-block-special-separator-child home-container-products-sales-special-day"><prod out="p55" em="new,rand"></div>
+        </div>
+        <div class="main-product-block-special-separator-banner">
+          <a href="<banner-redir 13>" target="_self">
+            <img src="<banner-image 13>" alt="<banner-alt 13>" width="418" height="500" loading="lazy">
+            <div class="home-container-three-banners-child-text">
+                <div class="home-container-three-banners-child-text-title"><var key="theme-5-home-banner-title-releases"></var></div>
+                <div class="home-container-three-banners-child-button"><var key="theme-5-home-banner-button"></var></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Highlights -->
+    <div id="home-featured-section">
+      <div class="main-product-block-container">
+        <div class="main-product-block-container-title">
+         <h2><var key="theme-4-home-title-highlights-txt"></var></h2>
+        </div>
+        <div class="main-product-block-container-products">
+          <div class="home-container-products-child main-product-block-container-products-child home-container-products-featured"><prod out="p5" em="high,rand"></div>
+          <div class="home-container-products-child main-product-block-container-products-child home-container-products-featured"><prod out="p5" em="high,rand"></div>
+          <div class="home-container-products-child main-product-block-container-products-child home-container-products-featured"><prod out="p5" em="high,rand"></div>
+          <div class="home-container-products-child main-product-block-container-products-child home-container-products-featured"><prod out="p5" em="high,rand"></div>
+        </div>
+      </div>
+  
+      <!-- Product & Banner -->
+      <div class="main-product-block-special-separator">
+        <div class="main-product-block-special-separator-product">
+          <div class="main-product-block-special-separator-child home-container-products-sales-special-day"><prod out="p55" em="high,rand"></div>
+        </div>
+        <div class="main-product-block-special-separator-banner">
+          <a href="<banner-redir 14>" target="_self">
+            <img src="<banner-image 14>" alt="<banner-alt 14>" width="418" height="500" loading="lazy">
+            <div class="home-container-three-banners-child-text">
+                <div class="home-container-three-banners-child-text-title"><var key="theme-5-home-banner-title-featured"></var></div>
+                <div class="home-container-three-banners-child-button"><var key="theme-5-home-banner-button"></var></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info Separator -->
+    <div class="main-info-container">
+      <div class="main-info-separator">
+        <div class="main-info-separator-child">
+          <a href="<url-help>#Pagamento">
+            <div class="main-info-separator-img"><img src="<storePath>images/icon-banner-payment-theme5.svg" alt="payment" width="50" height="50" loading="lazy"></div>
+            <p><var key="theme-5-home-title-payments-txt"></var></p>
+            <h3><var key="theme-5-home-subtitle-payments-txt"></h3>
+          </a>
+        </div>
+        <div class="main-info-separator-child">
+          <a href="<url-help>#Entregas">
+            <div class="main-info-separator-img"><img src="<storePath>images/icon-banner-security-theme5.svg" alt="delivery" width="50" height="50" loading="lazy"></div>
+            <p><var key="theme-5-home-title-delivery-txt"></var></p>
+            <h3><var key="theme-5-home-subtitle-delivery-txt"></var></h3>
+          </a>
+        </div>
+        <div class="main-info-separator-child">
+          <a href="<url-help>#Seguranca">
+            <div class="main-info-separator-img"><img src="<storePath>images/icon-banner-delivery-theme5.svg" alt="security" width="50" height="50" loading="lazy"></div>
+            <p><var key="theme-5-home-title-security-txt"></var></p>
+            <h3><var key="theme-5-home-subtitle-security-txt"></var></h3>
+          </a>
+        </div>
+        <div class="main-info-separator-child">
+          <a href="<url-contact>">
+            <div class="main-info-separator-img"><img src="<storePath>images/icon-banner-contact-theme5.svg" alt="security" width="50" height="50" loading="lazy"></div>
+            <p><var key="theme-5-home-title-doubt-txt"></var></p>
+            <h3><var key="theme-5-home-subtitle-doubt-txt"></var></h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Banners Slideshow -->
+<textarea id="FC-HideHomeBanners" style="display:none;">
+  <div class="carouselBanner js-flickity" id="home-banner-flickty"></div>
+</textarea>
