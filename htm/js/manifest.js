@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json.schemastore.org/web-manifest-combined.json",
+  "name":"<storeName>",
+  "short_name":"<storeName>",
+  "description":"<metaDescription>",
+  "categories":["shopping"],
+  "scope":"/",
+  "id":"/home.ehc?from=storepwa",
+  "start_url":"/home.ehc?from=storepwa",
+  "theme_color":"#<backgroundColor>",
+  "background_color":"#<backgroundColor>",
+  "orientation":"portrait-primary",
+  "display":"standalone",
+  "icons":[
+    {"src":"<storePath>images/pwa-icon-512-mask.png?cccfc=1","type":"image/png","sizes":"512x512","purpose":"maskable"},
+    {"src":"<storePath>images/pwa-icon-192-mask.png?cccfc=1","type":"image/png","sizes":"192x192","purpose":"maskable"},
+    {"src":"<storePath>images/pwa-icon-512.png?cccfc=1","type":"image/png","sizes":"512x512","purpose":"any"},
+    {"src":"<storePath>images/pwa-icon-192.png?cccfc=1","type":"image/png","sizes":"192x192","purpose":"any"},
+    {"src":"<storePath>images/pwa-icon.svg?cccfc=1","type":"image/svg+xml","sizes":"512x512","purpose":"any"}
+  ]
+}
