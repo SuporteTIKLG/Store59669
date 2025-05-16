@@ -1,0 +1,47 @@
+<script src='<PathTo file="htm/js/smartmodal-min.js">'></script>
+<script src='<PathTo file="htm/js/hotsite-lib-min.js">'></script>
+<style><IncludeHTML src="themes/{theme-folder}/css/theme-product.css"></style>
+<style><IncludeHTML src="themes/{theme-folder}/css/theme-home.css"></style>
+<style><IncludeHTML src="themes/{theme-folder}/css/theme-highlights.css"></style>
+
+<!-- Template for product quantity in cart -->
+<textarea id=cartQuantityTemplate style=display:none>
+  <div id="dynCartAdd<prodId>" class="dynCartAdd hidethis" onclick="dynCart$.changeQty(<prodId>,1)"><dynCartAdd></div>
+  <div id="dynCartQtyPanel<prodId>" class="dynCartQtyPanel hidethis">
+    <svg class=dynCartQtyDel viewBox="0 0 24 24" onclick="dynCart$.stepQty(<prodId>,false)"><path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm5 11h-10v-2h10v2z"/></svg>
+    <input type=number id="dynCartQty<prodId>" prodid="<prodId>" value="<cartprodqty>" oriValue="<cartprodqty>" maxlength=2 oninput="this.value=this.value.replace(/[^\d+]/,'').substring(0,3)" onkeyup="delayExec(function(){dynCart$.inputQty(<prodId>);},1000)">
+    <svg class=dynCartQtyAdd viewBox="0 0 24 24" onclick="dynCart$.stepQty(<prodId>,true)"><path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm5 11h-4v4h-2v-4h-4v-2h4v-4h2v4h4v2z"/></svg>
+  </div>
+  <div id="dynCartDone<prodId>" class="dynCartDone hidethis"><div class="skeleton-item"><a onclick="Cart$.fnShowCartCheckout();"><dynCartDone></a></div></div>
+</textarea>
+
+<!-- Hotsite Filters -->
+<div id="filter-offcanvas-overlay" onclick="filterCloseNav();"></div>
+<div id="filterSidenav" class="filter-sidenav font-regular">
+  <div class="closebtn" onclick="filterCloseNav();"><img alt="Close" id="list-filters-close" src="<PathTo file="images/icon-menu-close-filter.svg">" loading="lazy" width="35" height="35"></div>
+  <div id="ProductsFilterFCMobile" data-include-css="false"></div>
+  <br>
+  <div id="ProductsFilterFC_Hotsite"></div>
+</div>
+
+<div id="idMobileFilters">
+  <div class="fc-mobile-filters-left" id="fc-mobile-dynamic-filter">
+    <div onclick="filterOpenNav();"><img width="30" height="30" src="<PathTo file="images/icon-filters.svg">" alt="Filters" loading="lazy"> <b><var key="list-filters-title"></var></b></div>
+  </div>
+  <div class="fc-mobile-filters-right">
+    <div id="idPagProdTop"></div>
+  </div>
+</div>
+
+<div class="home-main-container" id="TabTitProd">
+  <div class="MainHomeBoxTitFC">
+    <h1 class="MainHomeBoxTitFC-line"><var key="featured-products-title"></var></h1>
+    <div id=HotSiteQtd></div> 
+  </div> 
+  <IncludeHTML src="themes/{theme-folder}/theme-product-highlights.htm">
+</div>
+
+<script>
+LibHotSite$.fnInit();
+FCLib$.onLoaded(function(){skeletonLib$.removeClass("loading-skeleton",document);});
+</script>
