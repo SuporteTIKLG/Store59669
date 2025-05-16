@@ -1,0 +1,32 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+<link href="https://fonts.gstatic.com" crossorigin rel="dns-prefetch">
+<link href="https://fonts.googleapis.com/" rel="dns-prefetch">
+<link href="https://ajax.googleapis.com" rel="dns-prefetch">
+<link href="https://stats.g.doubleclick.net" rel="dns-prefetch">
+<link href="https://www.facebook.com" rel="dns-prefetch" rel="preconnect">
+<link href="https://connect.facebook.net" rel="dns-prefetch" rel="preconnect">
+<link href="https://www.google-analytics.com" rel="dns-prefetch">
+<link href="https://www.googletagmanager.com/" rel="dns-prefetch">
+<script src="/js/vex/v4.0.1/vex.combined.min.js?cccfc=1"></script>
+<script src="/js/flickity/v2.2.2/flickity-min.js?cccfc=1"></script>
+<StoreInterests>
+<script src='<PathTo file="htm/js/resource-<StoreLanguage>.js">'></script>
+<script src='<PathTo file="htm/js/config.js">'></script>
+<script src='<PathTo file="htm/js/store-lib.js">'></script>
+<script>
+vex.defaultOptions.className="vex-theme-default";
+var iItensCesta=<QtdCesta>;
+var iQtdProds=0;
+ImgLoadingFC="/images/circular-loading.svg?cccfc=1";
+ImgOnError=FC$.PathImg+"nd";
+FCLib$.LazyLoadWaitImage="/images/circular-loading.svg?cccfc=1"; /* loading lazy load */
+</script>
+<header>
+  <style><IncludeHTML src="themes/{theme-folder}/css/theme-header-style.css"></style>
+  <IncludeHTML src="themes/{theme-folder}/theme-header.htm">
+  <!-- Receive Banner Home -->
+  <div id="FC-ShowHomeBanners"></div>
+</header>
+
+<!-- Begin Aside - Don't remove -->
+<div class="middle-container" role="main">
