@@ -1,0 +1,74 @@
+/* Theme 5 Store Async - 2024 (v1) */
+:root {
+  --primary-color:<tag-FCCSSMainColor>!important;
+  --secondary-color:<tag-FCCSSSecondMainColor>!important;
+  --bg-color:#f2f2f2!important;  
+  --color-black:#000000!important;
+  --color-white:#ffffff!important;
+  --color-gray:#666666!important;
+}
+
+/* header */
+body{background-color:var(--bg-color);color:var(--color-gray);}
+.header-linearbg{background:linear-gradient(180deg, var(--primary-color) 0%,rgba(0,0,0,0) 100%);max-width:1920px;margin:0 auto;}
+.checkout-header-logo{background:linear-gradient(180deg, var(--primary-color) 0%,rgba(0,0,0,0) 100%);max-width:1920px;margin:0 auto;}
+.header-menu-container{background:var(--primary-color);}
+.dropdown:hover .dropbtn{background-color:var(--secondary-color);}
+.dropdown-content a:hover:nth-child(odd){background:var(--primary-color);}
+.dropdown-content a:hover:nth-child(even){background:var(--primary-color);}
+#search-button{background-color:var(--color-white);border:1px solid var(--color-white);}
+.header-shopping-cart-qty{background-color:var(--primary-color);}
+.navigation-button-toggler .hamburger-icon{color:var(--color-white);}
+.navigation-body-close-button{color:var(--color-black);}
+.navigation-link{color:var(--color-black);}
+.navigation-link:visited{color:var(--color-black);}
+.navigation-link:active{color:var(--color-black);}
+.navigation-dropdown-item:nth-child(odd){background:#eeeeee!Important}
+.navigation-dropdown-item:nth-child(even){background:var(--color-white)}
+
+@media only screen and (min-width:1025px){
+  .home-banner-one-separator-left div a:hover,.home-banner-two-separator-left div a:hover{background:var(--primary-color);border:2px solid var(--primary-color)}
+  .navigation-item:not(.navigation-brand-text):hover .navigation-link{text-decoration:none !important; background-color:var(--secondary-color!important);}
+  .navigation-dropdown-item a:hover{background:var(--secondary-color);} 
+}
+
+/* main */
+.flickity-page-dots .dot{background:var(--color-black);border:1px solid var(--color-black);}
+.flickity-page-dots .dot.is-selected{background:var(--color-medium-gray!important);border:1px solid var(--color-black);}
+.first-banner-text{color:var(--color-black);}
+.second-banner-text{color:var(--color-black);}
+.button-banner-text{background-color:var(--color-black);color:var(--color-white);}
+.fc-badge-product-sale{background-color:var(--primary-color);}
+
+@media only screen and (max-width:1023px){
+  .home-banner-one-separator-left div a,.home-banner-two-separator-left div a{background:var(--primary-color);border:2px solid var(--primary-color)}
+  .home-banner-one-separator-left div a:hover,.home-banner-two-separator-left div a:hover{background:var(--primary-color);border:2px solid var(--primary-color)} 
+}
+
+/* Footer */
+footer{background:var(--primary-color);}
+.footer-newsletter-container h3{color:var(--color-white);}
+.footer-newsletter-container p{color:var(--color-white);}
+.footer-newsletter-form-button button.footer-newsletter-submit-button{background:var(--secondary-color);}
+.footer-mainbar-menu-one h4,.footer-mainbar-menu-two h4,.footer-mainbar-menu-three h4,.footer-mainbar-menu-four h4{color:var(--color-white);}
+#idTitPageHistory h3{color:var(--color-gray);}
+.EstPricePageHistory{color:var(--color-gray);}
+.footer-container-security-box a.footer-security-badge-3 img{background:var(--color-white);}
+.footer-payment-container h4{color:var(--color-white);}
+.footer-container-company-box p{color:var(--color-white);}
+.footer-container-tec-box p a{color:var(--color-white);}
+ul.footer-menu a{color:var(--color-white);}
+ul.footer-menu a:hover{color:var(--color-white);}
+ul.footer-menu .FooterCompanyBoxFC-phone{color:var(--color-white);}
+.footer-accordion:after{color:var(--color-white);}
+.footer-accordion{border-bottom:1px solid var(--color-white);}
+
+/* List */
+.prod-list-progress-bar>div{background-color: var(--primary-color);}
+.ProductList #idTxtIntroFoundProdsFC{color:var(--color-gray);} 
+#ContentFil .DivFiltrarPor .Label{background-color:var(--primary-color);}
+.ProductList .fc-mobile-filters-left{background:var(--color-gray);} 
+.ProductList .DivFiltrandoPor span.Label{background-color:var(--primary-color);}
+
+/* Det */
+.ProductDet #idEstNoCommentsClickProdOpFC a{background-color: var(--primary-color);}
