@@ -1,0 +1,33 @@
+<div class="prodBox">
+  <div class="list-prod-container loading-skeleton" <DataAttribute> id="DivProd<prodId>">
+    <div onclick="fcSpy$.openSmartModal('<URLProd>');" class="list-prod-container-grid-view">
+      <div class="DivListImagemProd list-prod-image skeleton-item" id="DivImagemProdDouble<prodId>" onclick="window.top.fcProductSpy$.openSmartModal('<URLProd>');" tabIndex="0"></div>
+    </div>
+    <div class="list-prod-grid-name-price list-prod-grid-name-container" onclick="window.top.fcProductSpy$.openSmartModal('<URLProd>');">
+      <div class="list-prod-name text-overflow skeleton-item"><prodNameEnc></div>
+      <div class="list-prod-price skeleton-item">
+        <div id="idProdPrice<prodId>"></div> 
+        <div class="PriceAVistaLista" id="ProdDesc<prodId>"></div>
+      </div>
+    </div>
+    <div class="list-prod-grid-dyn-zap-container">
+      <div class="dynCartDisabled dynCartQty hidethis"><div class=dynCartAdd onclick="window.top.fcProductSpy$.openSmartModal('<URLProd>');"><dynCartDisabled></div></div>
+      <div id="dynCartContainer<prodId>" class=dynCartQty dyn-cart-qty="<prodId>" dyn-cart-stock="<prodStock>.0" dyn-cart-a1="<desc1Val>" dyn-cart-a2="<desc2Val>" dyn-cart-a3="<desc3Val>" dyn-cart-d1="<descD1Val>" dyn-cart-d2="<descD2Val>" dyn-cart-d3="<descD3Val>" dyn-cart-color="<colorVal>" dyn-cart-price="<prodPriceNum>"></div>
+      <div class="container-whatsapp-button container-whatsapp<prodId>"></div>
+    </div>
+    <div id="zFProdSoldOut<prodId>"></div>
+    <script>IDProdutoPai=<prodId>;var iEstoqueSubs=0;var bTemSubs=false;</script>
+    <sub>
+      <script>iEstoqueSubs=iEstoqueSubs+<prodStock>.0;bTemSubs=true;</script>
+    </sub>
+  </div>
+  <script>
+  function fnProd<prodId>(){
+    sF$.fnProd("<prodImgMain>","<prodImgDet>","<URLProd>",<prodId>,"<prodNameFU>",<prodPriceNum>,<prodPriceOri>,"<prodRef>",<prodMaxInstallmentNum>,<prodStock>);sF$.fnWhatsAppBuyButton(<prodId>);
+    sF$.fnRemoveImageLink(<prodId>,"<URLProd>");
+  };
+  if(iPagProdFC==0)FCLib$.onReady(function(){fnProd<prodId>();}); else fnProd<prodId>();
+  sF$.fnGetSubProductSoldOutID(<prodId>,iEstoqueSubs,bTemSubs);
+  sF$.fnGetProductSoldOutID(<prodId>,<prodStock>);
+  </script>
+</div>
