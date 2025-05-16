@@ -1,0 +1,107 @@
+<!-- estiloproduto.htm : Grid v1 2024  (Theme) -->
+<ProdTop>
+<script>var IsFramePage=false;</script>
+<style><IncludeHTML src="themes/{theme-folder}/css/theme-product.css"></style>
+
+<!-- Script Filters -->
+<script>
+iQtdProds=<QtProd>;
+FCLib$.onReady(function(){
+  if(iQtdProds=="1"){
+    var sPages=sF$.fnGetID("idPageCountFC");
+    if(sPages)sPages.style.display="none";
+  }
+});
+OffsetAutoPagFC=290;
+var bTemSub=false;
+</script>
+
+<!-- Template for product quantity in cart -->
+<textarea id=cartQuantityTemplate style=display:none>
+  <div id="dynCartAdd<prodId>" class="dynCartAdd hidethis" onclick="dynCart$.changeQty(<prodId>,1)"><dynCartAdd></div>
+  <div id="dynCartQtyPanel<prodId>" class="dynCartQtyPanel hidethis">
+    <svg class=dynCartQtyDel viewBox="0 0 24 24" onclick="dynCart$.stepQty(<prodId>,false)"><path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm5 11h-10v-2h10v2z"/></svg>
+    <input type=number id="dynCartQty<prodId>" prodid="<prodId>" value="<cartprodqty>" oriValue="<cartprodqty>" maxlength=2 oninput="this.value=this.value.replace(/[^\d+]/,'').substring(0,3)" onkeyup="delayExec(function(){dynCart$.inputQty(<prodId>);},1000)">
+    <svg class=dynCartQtyAdd viewBox="0 0 24 24" onclick="dynCart$.stepQty(<prodId>,true)"><path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm5 11h-4v4h-2v-4h-4v-2h4v-4h2v4h4v2z"/></svg>
+  </div>
+  <div id="dynCartDone<prodId>" class="dynCartDone hidethis"><div class="skeleton-item"><a onclick="Cart$.fnShowCartCheckout();"><dynCartDone></a></div></div>
+</textarea>
+
+<div id="idDivPath">
+  <div id="idFiltersFC" style="display:none;">
+    <div id="idListaProdAdicional1FC">
+      <div class="EstTitQts"><descName1></div>
+      <ListAdic1Qt>
+    </div>
+    <div id="idListaProdAdicional2FC">
+      <div class="EstTitQts"><descName2></div>
+      <ListAdic2Qt>
+    </div>
+    <div id="idListaProdAdicional3FC">
+      <div class="EstTitQts"><descName3></div>
+      <ListAdic3Qt>
+    </div>
+  </div>
+</div>
+
+<div id="filter-offcanvas-overlay" onclick="filterCloseNav();"></div>
+<div id="filterSidenav" class="filter-sidenav font-regular">
+  <div class="closebtn" onclick="filterCloseNav();"><img alt="Close" id="list-filters-close" src="<PathTo file="images/icon-menu-close-filter.svg">" loading="lazy" width="35" height="35"></div>
+  <div id="ProductsFilterFCMobile" data-include-css="false"></div>
+</div>
+
+<div id="idMobileFilters">
+  <div class="fc-mobile-filters-left" id="fc-mobile-dynamic-filter">
+    <div onclick="filterOpenNav();"><img width="30" height="30" src="<PathTo file="images/icon-filters.svg">" alt="Filters"> <var key="list-filters-title"></var></div>
+  </div>
+  <div class="fc-mobile-filters-right">
+    <div id="idPagProdTop"></div>
+    <div class="grid-list-toggle"></div>
+  </div>
+</div>
+</ProdTop>
+
+<ProdList>
+<!-- Prod List -->
+<IncludeHTML src="themes/{theme-folder}/theme-product-list.htm">
+</ProdList>
+
+<ProdDet>
+<!-- Prod Det -->
+<link fetchpriority="high" href="<PathTo file="htm/css/fc_grid_v1.css">" rel="stylesheet" type="text/css" rel="preload">
+<script fetchpriority="high" src="<PathTo file="htm/js/fc_grid_v1.js">"></script>
+<link rel="stylesheet" type="text/css" href="/js/MagicToolbox/MagicZoomPlusV3/magiczoomplus.css" rel="preload" />
+<script type="text/javascript" src="/js/MagicToolbox/MagicZoomPlusV3/magiczoomplus.js" defer></script>
+
+<IncludeHTML src="themes/{theme-folder}/theme-product-det.htm">
+
+</ProdDet>
+
+<ProdAmp><!-- Prod Amp --></ProdAmp>
+<ProdBottom>
+<script>
+FCLib$.onLoaded(function(){skeletonLib$.removeClass("loading-skeleton",document);});
+
+function FuncAutoPagPreload(iPagProdFC){
+  skeletonLib$.showSkeleton(iPagProdFC);
+  sF$.fnFixDIVsSizes();
+}
+
+function FuncAutoPagPostload(sHTMLPage,iPagProdFC){
+  return skeletonLib$.removeSlideIn(sHTMLPage);
+}
+
+function FuncAutoPagStart(){
+  sF$.fnShowingProdsQty(false);
+}
+
+function FuncAutoPagEnd(){
+  if(iPagProdFC==iPagCountFC)sF$.fnShowingProdsQty(true);
+  dynCart$.updateQty();
+  skeletonLib$.removeClass("loading-skeleton",document);
+  sF$.fnFixDIVsSizes();
+}
+
+</script>
+</ProdBottom>
+<!-- estiloproduto.htm : Grid v1 2024  (Theme) -->
