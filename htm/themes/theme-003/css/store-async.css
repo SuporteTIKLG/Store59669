@@ -1,0 +1,67 @@
+/* Theme 3 Store Async - 2024 (v1) */
+:root {
+  --primary-color:<tag-FCCSSMainColor>!important;
+  --secondary-color:<tag-FCCSSSecondMainColor>!important;
+  --bg-color:#f2f2f2!important;  
+  --color-black:#000000!important;
+  --color-white:#ffffff!important;
+  --color-gray:#666666!important;
+}
+
+/* header */
+body{background-color:var(--bg-color);color:var(--color-black);}
+.header-info{background-color:#f8f8f8;border-bottom:1px solid #e3e3e3;}
+.header-menu-container{background:var(--primary-color);}
+.dropdown:hover .dropbtn{background-color:var(--secondary-color);}
+.dropdown-content a:hover:nth-child(odd){background:var(--primary-color);}
+.dropdown-content a:hover:nth-child(even){background:var(--primary-color);}
+.header-shopping-cart-qty{background-color:var(--primary-color);}
+.navigation-button-toggler .hamburger-icon{color:var(--color-black);}
+.navigation-body-close-button{color:var(--color-black);}
+.navigation-link{color:var(--color-black);}
+.navigation-link:visited{color:var(--color-black);}
+.navigation-link:active{color:var(--color-black);}
+.navigation-dropdown-item:nth-child(odd){background:#eeeeee!Important}
+.navigation-dropdown-item:nth-child(even){background:var(--color-white!important)}
+
+@media only screen and (min-width:1025px){
+  .home-banner-one-separator-left div a:hover,.home-banner-two-separator-left div a:hover{background:var(--primary-color);border:2px solid var(--primary-color)}
+  .navigation-item:not(.navigation-brand-text):hover .navigation-link{text-decoration:none !important; background-color:var(--secondary-color!important);}
+  .navigation-dropdown-item a:hover{background:var(--secondary-color);} 
+}
+
+/* main */
+.flickity-page-dots .dot{background:var(--color-black);border:1px solid var(--color-black);}
+.flickity-page-dots .dot.is-selected{background:var(--color-medium-gray!important);border:1px solid var(--color-black);}
+.first-banner-text{color:var(--color-black);}
+.second-banner-text{color:var(--color-black);}
+.button-banner-text{background-color:var(--color-black);color:var(--color-white);}
+.fc-badge-product-sale{background-color:<tag-FCCSSMainColor>;}
+
+@media only screen and (max-width:1023px){
+  .home-banner-one-separator-left div a,.home-banner-two-separator-left div a{background:<tag-FCCSSMainColor>;border:2px solid <tag-FCCSSMainColor>}
+  .home-banner-one-separator-left div a:hover,.home-banner-two-separator-left div a:hover{background:<tag-FCCSSMainColor>;border:2px solid <tag-FCCSSMainColor>} 
+}
+
+h1.MainHomeBoxTitFC-line:before, h1.MainHomeBoxTitFC-line:after, h2.MainHomeBoxTitFC-line:before, h2.MainHomeBoxTitFC-line:after, h3.MainHomeBoxTitFC-line:before, h3.MainHomeBoxTitFC-line:after{background-color:#1e1f20;}
+.home-container-three-banners-child-text{color:#1e1f20;border:2px solid #1e1f20;}
+.home-info-banners-icon{background:#1e1f20;}
+
+/* Footer */
+.footer-newsletter-submit-button{background:<tag-FCCSSMainColor>;}
+.footer-mainbar-menu-one h4,.footer-mainbar-menu-two h4,.footer-mainbar-menu-three h4,.footer-mainbar-menu-four h4{color:var(--color-gray);}
+.footer-social-container h4,.footer-security-container h4,.footer-payment-container h4{color:var(--color-gray);}
+.FooterTecBoxFC a,.FooterCompanyBoxFC a{color:var(--color-gray);} 
+.FooterTecBoxFC b,.FooterCompanyBoxFC b{color:var(--color-gray);}
+#idTitPageHistory h3{color:var(--color-gray);}
+
+/* List */
+#ContentFil .FilSearch .FilName{border-bottom:2px solid var(--color-gray);background:var(--color-gray);}
+.prod-list-progress-bar>div{background-color: var(--primary-color);}
+.ProductList #idTxtIntroFoundProdsFC{color:var(--color-gray);} 
+.ProductList .fc-mobile-filters-left{background:var(--color-gray);}
+
+/* Det */
+.ProductDet #idEstNoCommentsClickProdOpFC a{background-color: var(--primary-color);}
+
+#bTContainer .bTText{color:var(--color-gray)}
