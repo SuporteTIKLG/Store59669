@@ -1,0 +1,76 @@
+<script src='<PathTo file="htm/themes/theme-003/js/mega-menu-dropdown-min.js">'></script>
+<nav id="navigation" class="navigation navigation-justified navigation-landscape">
+  <div class="header-info">
+    <div class="header-info-container">
+      <div class="header-info-email"><a href="/contact.ehc"><img alt="Email" src="<storePath>images/ic_email_1.svg" width="16" height="16"><var key="header-mainbar-email"></var></a></div>
+      <div class="header-info-phone"><img alt="Phone" src="<storePath>images/ic_phone_1.svg" width="16" height="16"><var key="header-mainbar-phone"></var>&nbsp;<CompanyPhone></div>
+    </div>
+  </div>
+  <div class="header-container">
+    <div class="header-offcanvas-menu">
+      <div class="navigation-button-toggler">
+        <i class="hamburger-icon"></i>
+      </div>
+    </div>
+    <div class="header-logo">
+      <a href="<StoreDomain>"><img alt="<storeName>" src="" class="header-container-logo HeaderLogo" width="200" height="100" onerror="sF$.fnSetConfigLogo(this,'<store-logo>')"></a>
+    </div>
+    <div class="header-search">
+      <search>
+        <form name="TopSearchForm" method="GET" id="autocomplete-form" action="<url-prod>">
+          <input type="hidden" name="<par-typed>" value="true">
+          <div class="header-search-input-container">
+            <input type="text" id="autocomplete" value="<SearchText>" name="<par-text>" class="InputTextBusca" aria-label="Search field" maxlength=40>
+            <button id="search-button" type="submit" aria-label="Search">                     
+              <img width="28" height="28" src="<storePath>images/iconsearch-theme3.svg?cccfc=1" alt="Search" id="voiceSearchMGlass">
+            </button>
+            <img class="header-speech-icon" id="voiceSearch" onclick="sF$.fnStartDictation()" src="<storePath>images/icon-speech.svg?cccfc=1" width="34" height="34" alt="Voice" />
+          </div>
+        </form>
+      </search>
+    </div>
+    <div class="header-login">
+      <div id="header-mainbar-container-login">
+        <span class="loginInfo" id="fc-loginInfo"></span><span class="header-login-info-text"><a href="<url-account>"><var key="header-mainbar-my-account"></var></a></span>
+      </div>
+    </div>
+    <div class="header-cart">
+      <span onclick="Cart$.fnShowCartCheckout();" class="header-cart-container">
+        <div class="header-shopping-cart-icon"><img width="30" height="30" src="<storePath>images/iconcart-theme3.svg" id="header-cat-cart" alt="Cart"></div>
+        <div class="header-shopping-cart-qty"><span id="idCartItemsTop" class="HeaderCartNumberProds"></span></div>
+      </span>
+    </div>
+  </div>
+  <div class="header-menu-container">
+      <div class="navigation-body scroll-momentum header-menu">
+        <div class="navigation-body-header">
+          <span class="navigation-body-close-button">&times;</span>
+        </div>
+        <div class="header-menu-align">
+          <div class="header-menu-align-horizontal">
+            <ul class="navigation-menu" id="horizontalMenuCont">
+              <li class="navigation-item is-active"><a href="/" class="navigation-link navigation-text-uppercase"><var key="header-cat-home"></var></a></li>
+              <li class="navigation-item navigation-item-mobile navigation-text-uppercase"><a href="<url-sale>" class="navigation-link"><var key="header-cat-sales"></var></a></li>
+              <li class="navigation-item navigation-item-mobile navigation-text-uppercase"><a href="<url-release>" class="navigation-link"><var key="header-cat-releases"></var></a></li>
+              <li class="navigation-item navigation-item-mobile navigation-text-uppercase"><a href="<url-categories>" class="navigation-link"><categories></a></li>
+              <script>
+                <ListPathCat out="14">
+                sF$.fnHeaderDropdown();
+              </script>
+              <li class="navigation-item navigation-item-mobile navigation-text-uppercase"><a href="<url-add-product>" class="navigation-link"><var key="header-cat-cart"></var></a></li>
+              <li class="navigation-item navigation-item-mobile navigation-text-uppercase"><a href="<url-account>?orders=1#Orders" class="navigation-link"><var key="header-cat-my-orders"></var></a></li>
+              <li class="navigation-item navigation-item-mobile navigation-text-uppercase"><a href="<url-account>?wishlist=1#Wishlist" class="navigation-link"><var key="header-cat-my-wishlist"></var></a></li>
+              <li class="navigation-item navigation-item-mobile navigation-text-uppercase"><a href="<url-account>?register=1#Register" class="navigation-link"><var key="header-cat-register"></var></a></li>
+              <li class="navigation-item navigation-item-mobile navigation-text-uppercase"><a href="<url-newsletter>" class="navigation-link"><var key="header-cat-newsletter"></var></a></li>
+              <li class="navigation-item navigation-text-uppercase"><a href="<url-contact>" class="navigation-link"><var key="header-cat-contact-us"></var></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div>
+</nav>
+<div class="header-space-top"></div>
+<script>var navigation = new Navigation(document.getElementById("navigation"));</script>
+<!-- Receive Banner Home -->
+<div id="FC-ShowHomeBanners"></div>
+<!-- End Banner Home -->
