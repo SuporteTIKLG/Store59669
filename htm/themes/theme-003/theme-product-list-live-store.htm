@@ -1,0 +1,35 @@
+<div class="prodBox">
+  <FormProd>
+    <div class="DivListProd loading-skeleton list-prod-container" <DataAttribute> id="DivProd<prodId>">
+      <div class="prodlist-details-wishlist-container">
+        <div class="ProductList-wishlist"><wishlist></div>
+      </div>
+      <div class="DivProductListProd">
+        <div class="DivProductListImagemProd skeleton-item" id="DivImagemProdDouble<prodId>" onclick="window.top.fcProductSpy$.openSmartModal('<URLProd>');"></div>
+        <div class="prod-list-container-grid-view">
+          <div class="DivProductListNomeProd skeleton-item" id="DivProductListNomeProd<prodId>" onclick="window.top.fcProductSpy$.openSmartModal('<URLProd>');">
+            <span class="ProductListNomeProd text-overflow font-regular"><prodNameEnc></span>
+          </div>
+          <div class="DivProductListPriceProd skeleton-item" id="DivProductListPriceProd<prodId>" style="white-space:nowrap;" onclick="window.top.fcProductSpy$.openSmartModal('<URLProd>');">
+            <div id="idProdPrice<prodId>"></div> 
+            <div class="PriceAVistaLista" id="ProdDesc<prodId>"></div>
+          </div>
+        </div>
+        <div class="prodlist-spy-details-container skeleton-item list-prod-grid-dyn-zap-container">
+          <div class="dynCartDisabled dynCartQty hidethis"><div class=dynCartAdd onclick="fcSpy$.openSmartModal('<URLProd>');"><dynCartDisabled></div></div>
+          <div id="dynCartContainer<prodId>" class=dynCartQty dyn-cart-qty="<prodId>" dyn-cart-stock="<prodStock>.0" dyn-cart-a1="<desc1Val>" dyn-cart-a2="<desc2Val>" dyn-cart-a3="<desc3Val>" dyn-cart-d1="<descD1Val>" dyn-cart-d2="<descD2Val>" dyn-cart-d3="<descD3Val>" dyn-cart-color="<colorVal>" dyn-cart-price="<prodPriceNum>"></div>
+          <div class="container-whatsapp-button container-whatsapp<prodId>"></div>
+        </div>
+      </div>
+      <div id="zFProdSoldOut<prodId>"></div>
+      <script>IDProdutoPai=<prodId>;var iEstoqueSubs=0;var bTemSubs=false;</script>
+      <sub>
+        <script>iEstoqueSubs=iEstoqueSubs+<prodStock>.0;bTemSubs=true;</script>
+      </sub>
+    </div>
+  </FormProd>
+  <script>
+  sF$.fnProd("<prodImgMain>",("<prodImgDet>"==""?"<prodImgMain>":"<prodImgDet>"),"<URLProd>",<prodId>,"<prodNameFU>",<prodPriceNum>,<prodPriceOri>,"<prodRef>",<prodMaxInstallmentNum>,<prodStock>);sF$.fnWhatsAppBuyButton(<prodId>);
+  sF$.fnRemoveImageLink(<prodId>,"<URLProd>");
+  </script>
+</div>
