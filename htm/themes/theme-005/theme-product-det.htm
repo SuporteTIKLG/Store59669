@@ -1,0 +1,268 @@
+<div class="product-details-breadcrumb">
+  <div class="product-details-breadcrumb-container">
+    <div class="product-details-breadcrumb-container-first">
+      <a href="/home.asp?idloja=<IDLoja>" class="ProductStyleBreadCrumblinkFC">Home:</a>
+    </div>
+    <div class="product-details-breadcrumb-container-second">
+      <PathCat>
+    </div>
+  </div>
+</div>
+
+<div class="product-details-container">
+  <div class="product-details">
+    <div class="product-details-image">
+      <div class="zoom-gallery" id="idDivGridImg">
+        <a href=" " class="MagicZoom" id="zoom2" data-mobile-options='textExpandHint:;textClickZoomHint:;zoomMode:off' data-options='textHoverZoomHint:;textExpandHint:;selectorTrigger:hover;transitionEffect:false;lazyZoom:true;expand:off'>
+          <img src=" " alt="<prodNameEnc>" onError="MostraImgOnError(this,0)">
+        </a>
+      </div> 
+    </div>
+    <div class="product-details-content">
+      <div class="product-details-release">
+        <prodRelease>
+      </div>
+      <div class="product-details-name">
+        <h1 id="idNameProductGridFC"><prodNameEnc></h1>
+      </div>
+
+      <div class="product-details-sku-review-container">
+        <div class="product-details-sku">Ref. <span id="idCodProdGrid"><prodRef></span></div>
+        <div class="product-details-review-icons">
+        <div class="det-product-show-product-review-icons"></div>
+          <script type="text/javascript">
+          iQtdOp=<prodReviewsQty>.0;
+          sF$.fnShowReviewsDet("<url-product-review>",<prodId>,"<prodAverageReviews>",<prodReviewsQty>); 
+          </script>
+        </div>
+      </div>
+
+      <div class="product-details-content-container">
+      <!-- Stock -->
+      <div class="product-details-show-stock-container">
+        <div id="product-details-show-stock"></div>
+          <script type="text/javascript">
+          FCLib$.onReady(function(){
+            var sStockProduct=<prodstock>.0;
+            fnGetStockProduct(sStockProduct);});
+          </script>
+      </div>
+      <!-- Date prom -->
+      <div class="product-details-data-prom">
+        <div id="DataProm"></div>
+        <script type="text/javascript">
+        var sDateTime="<DataPromFim>";
+        FCLib$.onReady(function(){fnShowDateProm(sDateTime);});
+        </script>
+      </div>
+        <div class="product-details-content-price">
+          <div class="prod-price" id="idPriceGridFC<prodId>">
+            <div class="product-details-price-container"><prodPriceSimple></div>
+          </div>
+        <script>
+          FCLib$.onReady(function(){
+            var e=document.getElementById("idPriceGridFC<IDProduto>");
+            if(e)e.innerHTML += fnMaxInstallmentsGrid(<PrecoNum>,<MaxParcelasProdNum>) + fnShowEconomyGrid(<PrecoNum>,<PrecoOri>);
+          });
+        </script>
+
+        </div>
+        <div class="product-details-content-price-avista">
+          <p id="idPriceAVista">
+            <script>const TPProdPrice=<prodPriceNum>;FCLib$.onReady(function(){sF$.fnMostraDescontoProdDet(<prodPriceNum>);});</script>
+          </p>
+          <!-- Payment Table  -->
+          <div id="tpDisplayCard" class="hidethis">
+            <button class="accordionFC"><img  src="<storepath>images/iconcard.svg" width="25" height="25" alt="card"><span class="tp-title"><var key="payment-table-details-text"></var></span></button>
+            <div class="panelFC"></div>
+          </div>
+          <script>sF$.fnProductMaxInstallment(<prodMaxInstallmentNum>);</script>
+          <!-- End - Payment Table -->
+        </div>
+        <div id="product-details-dyncart-container">
+          <div id="dynCartContainer<prodId>" class=dynCartQty dyn-cart-qty="<prodId>" dyn-cart-stock="<prodStock>.0" dyn-cart-a1="<desc1Val>" dyn-cart-a2="<desc2Val>" dyn-cart-a3="<desc3Val>" dyn-cart-d1="<descD1Val>" dyn-cart-d2="<descD2Val>" dyn-cart-d3="<descD3Val>" dyn-cart-color="<colorVal>" dyn-cart-price="<prodPriceNum>"></div>
+        </div>
+        <div class="FCGridMain" id="idMainGridFC_<prodId>"></div>
+        <div class="container-whatsapp-button container-whatsapp<prodId>"></div>
+        <div class="FreightContainerFC">
+          <div id="ShowCEP<prodId>"></div>
+        </div>
+        <div class="product-details-webshare">
+          <button id="webshare-product"><img src="<storePath>images/ic_webshareapi.svg" alt="Share" width="30" height="30" align="absmiddle" loading="lazy"><var key="product-share-this-product"></var></button>
+          <script>sF$.fnWebShareAPIProduct("<storeName>","<prodNameEnc>",<IDLojaNum>,<prodId>);</script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="product-details-description-container">
+  <div class="product-details-description">
+    <div  class="product-details-container-title-container">
+      <div class="product-details-container-title  product-details-collapsible-container">
+        <h2><var key="theme-4-details-description-title"></var></h2>
+      </div>
+      <div class="product-details-collapsible-content">
+        <div class="ProductStyleBoxDescriptionFC">
+          <prodDescription>
+        </div>
+        <div class="ProductStyleBoxDescriptionFC">
+           <DescrHTM>
+        </div>
+        <div class="ProductStyleBoxDescriptionFC">
+           <DescrURL>
+        </div>
+        <div class="ProductStyleBoxDescriptionFC">
+           <BarCode>
+        </div>
+        <div class="det-product-filters"><ProdFilters></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="product-details-review-container">
+  <div class="product-details-review">
+    <div class="product-details-container-title product-details-collapsible-container">
+      <h2><var key="theme-4-product-review-customers-comments"></var></h2>
+    </div>
+    <div class="ProductStyleBoxDescriptionFC product-details-collapsible-content">
+       <Comments>
+    </div>
+  </div>
+</div>
+
+<script>
+var collapsibleBoxDet = document.getElementsByClassName("product-details-collapsible-container");
+for(i=0;i<collapsibleBoxDet.length;i++){
+  collapsibleBoxDet[i].addEventListener("click",function(){
+    this.classList.toggle("product-details-collapsible-active");
+    var contentBoxDet=this.nextElementSibling;
+    if(contentBoxDet.style.maxHeight){
+      contentBoxDet.style.maxHeight=null;
+    }else{
+      contentBoxDet.style.maxHeight=contentBoxDet.scrollHeight+"px";
+    }
+  });
+}
+</script>
+
+</div>
+
+<div class="product-details-buytogether-container">
+  <div class="product-details-buytogether">
+    <div class="ProductStyleBoxDescriptionFC">
+       <BuyTogether>
+    </div>
+  </div>
+</div>
+
+<div class="product-details-crossSelling-container">
+  <div class="product-details-crossSelling">
+    <div class="ProductStyleBoxDescriptionFC">
+       <CrossSelling>
+       <script>sF$.fnInsertDynCarouselCrossSelling();</script>
+    </div>
+  </div>
+</div>
+
+<!-- Javascript ZipCode - Description CrossSelling -->
+<script>
+FCLib$.onReady(function(){
+  sF$.fnCustomizeIconsSocialNetworks(true);
+  fnShowCEP(<prodId>);
+  fnShowCEPGrid(<prodId>); /*FC simulação de frete */
+});
+FCGrid$.showVideoGrid("<CodVideoProd>");
+if(!<prodAvailable>)sF$.fnHideProdAvailable();
+sF$.showTablePaymentsDetails();
+sF$.fnWhatsAppBuyButton(<prodId>);
+</script>
+
+<script>
+var GridLib_<prodId>$=(function(){
+  var oProdTags={
+    ImagemProdDet:("<prodImgDet>"==""?"<prodImgMain>":"<prodImgDet>"),
+    ImagemProdAmp:("<prodImgAmp>"==""?("<prodImgDet>"==""?"<prodImgMain>":"<prodImgDet>"):"<prodImgAmp>"),
+    CorVal:"<colorVal>",
+    CorRGB:"<colorRGB>",
+    IDProduto:<prodId>,
+    CodProd:"<prodRef>",
+    Estoque:(""=="<prodStock>"?99999999:<prodStock>.0),
+    PesoNum:"<weightNum>",
+    PrecoOri:"<prodPriceOri>",
+    PrecoNum:"<prodPriceNum>",
+    MaxParcelasProdNum:<prodMaxInstallmentNum>,
+    ProdName:"<prodNameEnc>",
+    ProdCategory:"<catNameEnc>",
+    Adicional1Val:"<desc1Val>",
+    Adicional2Val:"<desc2Val>",
+    Adicional3Val:"<desc3Val>",
+    AdicionalD1Val:"<descD1Val>",
+    AdicionalD2Val:"<descD2Val>",
+    AdicionalD3Val:"<descD3Val>",
+    NomeAdicional1:"<descName1>",
+    NomeAdicional2:"<descName2>",
+    NomeAdicional3:"<descName3>",
+    NomeAdicionalD1:"<descD1Name>",
+    NomeAdicionalD2:"<descD2Name>",
+    NomeAdicionalD3:"<descD3Name>"
+  };
+
+  var aSubProdTags=[];
+  <sub>
+    aSubProdTags.push({
+      ImagemProdDet:("<prodImgDet>"==""?"<prodImgMain>":"<prodImgDet>"),
+      ImagemProdAmp:("<prodImgAmp>"==""?("<prodImgDet>"==""?"<prodImgMain>":"<prodImgDet>"):"<prodImgAmp>"),
+      CorVal:"<colorVal>",
+      CorRGB:"<colorRGB>",
+      IDProduto:<prodId>,
+      CodProd:"<prodRef>",
+      Estoque:(""=="<prodStock>"?99999999:<prodStock>.0),
+      PesoNum:"<weightNum>",
+      PrecoOri:"<prodPriceOri>",
+      PrecoNum:"<prodPriceNum>",
+      MaxParcelasProdNum:<prodMaxInstallmentNum>,
+      ProdName:"<prodNameEnc>",
+      ProdCategory:"<catNameEnc>",
+      Adicional1Val:"<desc1Val>",
+      Adicional2Val:"<desc2Val>",
+      Adicional3Val:"<desc3Val>",
+      AdicionalD1Val:"<descD1Val>",
+      AdicionalD2Val:"<descD2Val>",
+      AdicionalD3Val:"<descD3Val>"
+    });
+  </sub>
+  if(aSubProdTags.length==0)FCGrid$.fnGridAll(oProdTags,aSubProdTags);
+  else FCLib$.onReady(function(){FCGrid$.fnGridAll(oProdTags,aSubProdTags);}); 
+})();
+</script>
+<!-- End: JS scripts grid -->
+
+<!-- Box Buy proddet -->
+<div id="BoxFloat" class="buyBoxFloat">
+  <FormProd>
+    <div class="buyBoxFloatClose">
+      <img  src="<storePath>images/icon-menu-close-filter.svg" alt="Close" width="18" height="18" onclick='closeDiv()'>
+    </div>
+    <div class="buyBoxFloatImg">
+      <img  src="<prodImgMain>" alt="<prodNameEnc>">
+    </div>
+    <div class="buyBoxFloatName">
+      <ProdName>
+      <div style="display:none;"><Adicional1><Adicional2><Adicional3><AdicionalD1><AdicionalD2><AdicionalD3><Cor></div>
+    </div>
+    <div class="buyBoxFloatPrice">
+      <prodPriceAtSight>
+    </div>  
+    <div class="buyBoxFloatButtonHere">
+      <div class="fc-grid-add-to-cart-button" onclick="boxFloatGrid()"><b><var key="box-buy-details-text"></var></b></div>
+    </div>
+  </FormProd>
+</div>
+<script>
+sF$.fnToggleBoxFloat();
+function boxFloatGrid(){
+  document.querySelector(".FCNivelGrid_0")?window.scrollTo({top:0,behavior:'smooth'}):Compra<IDProduto>();
+}
+</script>
+<!-- End - Box buy proddet -->
