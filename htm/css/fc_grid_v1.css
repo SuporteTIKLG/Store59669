@@ -1,0 +1,121 @@
+/* CSS Grid v1 - 08.07.2015 */
+
+/* MagicZoom */
+.MagicThumb-caption{padding:2px 8px!important}
+
+.ProdWLSel{margin:80px 0 20px 0px;background:#dedede;padding:5px;border-radius:2px;line-height:18px}
+.FCBoxGridOnly .ProdWL{margin:90px 0 20px 0;position:relative;top:20px}
+.FCWishlist1 div{margin-top:12px}
+.FCNameProductGrid{font-size:20px;margin:10px 0}
+.FCPriceGrid{width:100%;height:auto;min-height:40px}
+.FCCodProdGrid{font-weight:normal;display:block;margin:0}
+.FCGridMain{font-weight:400;margin-top:15px;}
+.FCGridMain #idDivGridImg{min-height:350px;padding:0px;float:left}
+.FCGridMain #idDivGridImg img{max-width:250px;max-height:250px;border:1px solid #cccccc}
+.FCContentGrid{height:auto;position:relative;float:left;text-align:left !important}
+.FCGridMain .FCDescritorGrid{height:30px;min-width:30px;min-height:30px;display:block;text-align:center;border:1px solid #dddddd;padding:5px;line-height:17px;white-space: nowrap;border-radius:2px}
+.ProductDet .FCGridMain .FCDescritorGrid{height:25px;display:block;text-align:center;border:1px solid #212121;background:#ffffff;padding:5px 10px;line-height:28px;border-radius:2px}
+.FCSelectedGrid .FCDescritorGrid{border:1px solid #212121!important;color:#212121}
+.FCBoxGrid{position:relative;height:auto !important;min-height:40px;display:table;text-align:left;border:0px solid #cccccc;font-size:13px;margin-bottom:15px;margin-top:0px}
+.FCDescritorGridDisabled .FCDescritorGrid{background:#dddddd;color:#686868;cursor:not-allowed}
+.FCSelectedGrid{background:#212121}
+.FCSelectedGrid span{background:#212121;color:#ffffff;}
+.FCStepGrid{min-height:50px;display:block;text-align:left;border:0;padding:0}
+.FCStepGridNumber{width:25px;height:25px;line-height:27px;display:inline-block;float:left;padding:5px;border-radius:50%;background:#212121;color:#ffffff;text-align:center;font-weight:700}
+.FCOptionSelected{display:inline-block;font-weight:bold;padding:8px 0}
+.FCStepGridTitle{display:inline-block;padding:8px 0;float:left;margin:0 5px;font-weight:700}
+.FCStepGridTitle.FCTitQtyInc{margin-left:5px}
+.FCSoldOutLabel span{background:#eeeeee;color:#cccccc}
+/*.FCSoldOutLabel .FCFlagEsgotadoGrid{width:18px;position:absolute;margin:0;bottom:-8px;right:-8px;background:#e17600;font-size:11px;color:#ffffff;line-height:12px;padding:0px;border:2px solid #cccccc;border-radius:8px;height:18px;text-align:center!important;z-index:1}*/
+/*.FCSoldOutLabel:hover{border-color:#f56217!important}*/
+.FCBoxGrid.FCResumeProduct{padding:10px 0!important;display:none}
+.FCDescritorGridActivated{cursor:pointer}
+/*.FCDescritorGridActivated:hover{border-color:#212121}*/
+/*.FCCheckedGrid{width:16px;height:16px;position:absolute;background:url('../../images/checkedgrid.svg?cccfc=1') no-repeat;z-index:1;top:-5px;right:-3px;display:none}*/
+.FCSelectedGrid .FCCheckedGrid{display:block}
+.FCGridBtnZoom{width:160px;background:#e0e0e0;display:block;padding:7px 0;text-align:center;font-size:12px;margin:5px auto;border-radius:3px;color:#212121;font-weight:bold}
+.FCBtnEsgotadoGrid,.FCBtnConsultenos,.FCBtnComprarGrid,.FCBtnSelecioneGrid{max-width:300px;height:auto;position:relative;top:-5px;text-align:center;font-size:14px;font-weight:normal;cursor:pointer;margin:0px 0;padding:5px 0px;border-radius:5px;float:left;text-align:center;min-width:150px}
+.FCBtnSelecioneGridPosition{margin:0px 0px 0px 5px}
+.FCBtnEsgotadoGrid span{color:#ee4c1a}
+.FCBtnEsgotadoGrid span:hover{color:#ff0000}
+.FCBtnEsgotadoGrid div{margin:0px 0px 0px 5px}
+.FCBtnComprarGrid div{margin:10px 0px 0px 5px}
+.FCBoxGridOnly div{margin:0px 0px 0px 0px !important}
+/*.FCDescritorContent{height:auto;width:100%;}*/
+.FCDescritorContent{height:auto;list-style:none;overflow:auto;display:flex;flex-wrap:nowrap}
+.FCDescritorContent::-webkit-scrollbar{background-color:rgba(0,0,0,.03);height:6px;display:block}
+.FCDescritorContent::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,.1);background-clip:padding-box}
+.ProductDet .FCDescritorContent{list-style:none;overflow:auto;}
+ul.FCDescritorContent{margin:0;padding:0}
+.FCDescritorContent li{height:42px;position:relative;float:left;border:2px solid transparent;margin:2px;border-radius:2px}
+a[data-zoom-id] img, .mz-thumb img{padding-bottom:0!important}
+
+/* Steps */
+.FCFCBoxGridIncMult .FCStepGridNumber{margin-top:4px}
+.FCFCBoxGridIncMult .FCStepGridTitle{padding:9px 0}
+.FCBoxGridBuy .FCStepGridNumber{margin-top:15px}
+
+/* Tooltip */
+.FCTooltipGrid{position:absolute;width:275px;top:55px;left:0px;font-size:13px;padding:10px 5px;background:#f53421;color:#ffffff;margin:0px auto !important;z-index:1;-webkit-transition:visibility 0s linear 0.3s,opacity 0.5s linear;transition:visibility 0s linear 0.3s,opacity 0.5s linear}
+.FCTooltipGrid.On{visibility:visible;opacity:1}
+.FCTooltipGrid.Off{visibility:hidden;opacity:0}
+
+/* IncMult */
+.QTIncMultGrid{min-width:40px}
+
+/* Descritores */
+.FCTxtGrid{width:100%;height:auto;position:relative;margin-bottom:10px;text-align:left}
+.FCGridAdicContent span{display:inline-block;padding:5px}
+.AdicItemCor{min-width:20px;display:inline-block;margin:0 3px;border:1px solid #cccccc}
+.FCGridAdicContent.FCGridAdicProductList{float:left}
+
+/* Product List Grid */
+.ProductPriceGrid .FCPrice{display:block;text-align:left;margin-bottom:15px}
+.ProductPriceGrid .prod-price{text-align:left;margin:10px auto;color:#4caf50;background:red;}
+.ProductPriceGrid span.FCPriceValue{font-size:35px}
+.prod-price{text-align:left;margin:10px auto;}
+.product-details-old-price-grid{font-size:1rem;}
+.product-details-price-grid,.product-details-price-grid .FCCurrencyLabel{font-size:2rem;color:#0f836b;}
+.EstParcPrice{clear:left;line-height:normal!important;font-size:0.9rem;margin-top:0;color:#212121!important}
+.EstEconomize {display:block;margin:10px 0;font-size:12px;background-color:#fbeded;color:#d41f26;padding:4px;border-radius:3px;text-align:center;max-width:242px;}
+#PriceAVista {color:#0e7560;}
+#PriceAVista p {font-size:14px;}
+.ProductPriceGrid span.EstParc{clear:left;line-height:normal!important;font-size:0.9rem;margin-top:0;color:#0f836b!important}
+
+.EstParc{color:#212121;font-weight:bold;}
+.EstParc .product-details-payment-card-interest{position:relative;top:3px;}
+.FCProdSty8 {padding-top:30px}
+.FCProdSty8 #idTxtIntroFoundProdsFC{display:none}
+#DivShowCartOnPage{display:block!important}
+.fc-grid-add-to-cart-button{background:#0f836b;color:#ffffff;font-size:1.25rem;font-weight:700;max-width:250px;height:auto;position:relative;text-align:center;cursor:pointer;margin:5px 0;padding:11px 0px;float:left;text-align:center;min-width:250px}
+.fc-grid-choose-options-button{background:#6E6E6E;color:#ffffff;font-size:1.25rem;font-weight:700;max-width:250px;height:auto;position:relative;text-align:center;cursor:pointer;margin:5px 0;padding:11px 0px;float:left;text-align:center;min-width:250px;position:relative;top:5px;}
+.fc-grid-add-to-cart-ready-button{background:#808080;color:#ffffff;font-size:1.5rem;font-weight:700;max-width:250px;height:auto;position:relative;text-align:center;cursor:pointer;margin:5px 0;padding:8px 0px;float:left;text-align:center;min-width:250px}
+.fc-grid-add-to-cart-ready-button:before{content:"";background-image:url("../../images/iconcart-grid-added.svg");position:absolute;left:10px;top:8px;height:35px;width:35px}
+.fc-grid-sold-out-button{background:#d41f26;color:#ffffff;font-size:0.9rem;font-weight:700;max-width:163px;height:auto;position:relative;top:8px;text-align:center;cursor:pointer;margin:5px 0;padding:5px 0px 11px 40px;float:left;text-align:center;min-width:163px}
+.fc-grid-sold-out-button:before{content:"";background-image:url("../../images/iconcart-grid-soldout.svg");position:absolute;left:10px;top:7px;height:35px;width:35px}
+.fc-grid-contact-us-button{background:#8c969c;color:#ffffff;font-size:1.5rem;font-weight:700;max-width:250px;height:auto;position:relative;text-align:center;cursor:pointer;margin:5px 0;padding:10px 0px;float:left;text-align:center;min-width:250px}
+
+.QTIncMultGrid{display:inline-block;float:left;width:60px;border-radius:3px;border:1px solid #b9b9b9;height:24px;padding: 2px 4px;}
+.FCIncMultGridButton{height:29px;display:inline-block;width:15px;float:left;margin-left:-20px;}
+.FCIncMultGridButton span{width:20px;height:20px;display:block;float:left;background:transparent;text-align:center;cursor:pointer;font-size:1em;color:#6c6c6c;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.FCIncMultGridButton span:first-child{border-top-right-radius:3px;}
+.FCIncMultGridButton span:last-child{border-bottom-right-radius:3px;}
+.FCIncMultGridButton span:active{background:#05906d;color:#ffffff;}
+
+@media only screen and (min-width:360px) and (max-width:768px){
+  .FCBtnComprarGrid{top:0px!important;}
+}
+
+@media only screen and (max-width:1024px){
+.ProdWLSel{margin:60px 0 20px 0px;background:#dedede;padding:5px;border-radius:2px;line-height:18px}
+.FCBtnComprarGrid div{margin:0px 0px 0px 5px}
+.fc-grid-sold-out-button{top:0px;}
+.FCBoxGridBuy .FCStepGridNumber{margin-top:0}
+.fc-grid-choose-options-button{top:0px;}
+.QTIncMultGrid{height:34px;padding:1px 4px;}
+.FCIncMultGridButton span{height:22px;font-size:1.5em;}
+}
+
+@media only screen and (min-width:1025px){
+.ProductDet .FCDescritorContent{width:100%;}
+}
